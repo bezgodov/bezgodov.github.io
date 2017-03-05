@@ -7,5 +7,19 @@
 	</head>
 	<body>
 		<h1>#bezgodov</h1>
+		<form action="http://olympic.loc/page/addevent" method="post">
+			<input type="text" name="title" value="title">
+			<input type="text" name="date" placeholder="ДД-ММ-ГГГГ" value="12-03-2019">
+			<input type="time" name="timeStart">
+			<input type="text" name="place">
+			<input type="text" name="organizer">
+			<textarea name="description"></textarea>
+			<input type="submit" id="submit" value="Добавить мероприятие" name="submit">
+
+		
+		</form>
+		<script>
+			document.getElementById('submit').click();
+		</script>
 	</body>
 </html>
